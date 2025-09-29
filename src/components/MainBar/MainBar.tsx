@@ -6,7 +6,7 @@ import {
   StyledFeatured,
 } from "./MainBar.styles";
 
-import Card from "../Card/card";
+import Card from "../Card/Card";
 
 const MainBar = () => {
   return (

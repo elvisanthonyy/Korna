@@ -12,7 +12,7 @@ import {
   EditText,
   NotificatioIcon,
 } from "./Nav.styles";
-import { MdMenu, MdSearch, MdEditSquare } from "react-icons/md";
+import { MdMenu, MdSearch } from "react-icons/md";
 
 import { HiOutlineBell } from "react-icons/hi2";
 import { FaRegEdit } from "react-icons/fa";
