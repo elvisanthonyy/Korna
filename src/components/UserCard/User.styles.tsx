@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ChildProps {
+  userColor?: string;
+}
+
 export const UserCardContainer = styled.div`
   display: flex;
   align-items: top;
@@ -16,17 +20,18 @@ export const UserLeft = styled.div`
   width: 13%;
 `;
 
-export const UserLeftImage = styled.div`
+export const UserLeftImage = styled.div<ChildProps>`
   display: flex;
   height: 40px;
   width: 40px;
   border-radius: 100%;
-  background-color: #d8d8d8;
+  background-color: ${(props) => props.userColor};
 `;
 
 export const UserMiddle = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: start;
   width: 60%;
   height: 90%;
 `;
@@ -36,8 +41,9 @@ export const UserName = styled.h2`
   align-items: center;
   height: 20px;
   width: 80%;
-  font-size: 1em;
+  font-size: 0.9em;
   margin: 0;
+  font-weight: 900;
 `;
 
 export const UserDescription = styled.h4`
@@ -45,8 +51,8 @@ export const UserDescription = styled.h4`
   align-items: center;
   height: 30px;
   width: 80%;
-  margin: 5px 0;
-  font-size: 0.7em;
+  margin: 0;
+  font-size: 0.6em;
   color: #2c2c2c;
 `;
 
@@ -67,4 +73,11 @@ export const FollowButton = styled.button`
   width: 100%;
   border: 1px solid black;
   background-color: #ffffff;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  font-size: 0.6em;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 `;

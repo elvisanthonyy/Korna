@@ -16,6 +16,7 @@ import {
   ReadingListText,
   ReadingListBookmarkIcon,
   SideBarFooter,
+  ReadingListTextContainer,
 } from "./SideBar.styles";
 import StaffPickCard from "../StaffPickCard/StaffPickCard";
 import TopicButton from "../TopicButton/TopicButton";
@@ -29,9 +30,22 @@ const SideBar = () => {
       <SideBarItems>
         <StaffPickConatainer>
           <StaffPickHeading>Staff Picks</StaffPickHeading>
-          <StaffPickCard />
-          <StaffPickCard />
-          <StaffPickCard />
+          <StaffPickCard
+            postedBy="In The Medium Handbook by Zulie @Medium"
+            pickTitle=" How this brand strategist uses Medium to explore ideas, repurpose
+                  context, and land clients"
+            postedAt="2d ago"
+          />
+          <StaffPickCard
+            postedBy="Jud Brewer MD PHD"
+            pickTitle="From 'I Have to 'Get To'; How One Word Change Rewires Your Brain"
+            postedAt="5d ago"
+          />
+          <StaffPickCard
+            postedBy="Linh Nguyen"
+            pickTitle="Golden Design Lessons From Tokyo Metro"
+            postedAt="Sep 3"
+          />
           <StaffSeeFull>See full list</StaffSeeFull>
         </StaffPickConatainer>
         <RecommendedTopicsContainer>
@@ -50,21 +64,37 @@ const SideBar = () => {
         <WhoToFollowContainer>
           <WhoToFollowTitle>Who to follow</WhoToFollowTitle>
 
-          <User />
-          <User />
-          <User />
+          <User
+            userName="Dr.Derek Austin"
+            description="AI Content Engineer | teach LLMs to think - Full..."
+            userColor="blue"
+          />
+          <User
+            userName="ITNEXT"
+            description="Publication INEXT is a program for IT developers & software..."
+            userColor="green"
+          />
+          <User
+            userName="Oliver Foster"
+            description="Pimarily proficent in the Java programming..."
+            userColor="yellow"
+          />
           <WhoToFollowSeeMore>See more suggestion</WhoToFollowSeeMore>
         </WhoToFollowContainer>
         <ReadingList>
           <ReadingListTitle>Reading List</ReadingListTitle>
-          <ReadingListText>
-            Click on the
+          <ReadingListTextContainer>
+            <ReadingListText>Click on the</ReadingListText>
             <ReadingListBookmarkIcon>
               <MdOutlineBookmarkAdd />
             </ReadingListBookmarkIcon>
-            one any story to easily add it to your reading list or a custom list
-            you can share.
-          </ReadingListText>
+            <ReadingListText>
+              one any story to easily add it to your
+            </ReadingListText>
+            <ReadingListText>
+              reading list or a custom list you can share.
+            </ReadingListText>
+          </ReadingListTextContainer>
         </ReadingList>
         <SideBarFooter>
           <FooterItems itemText="Help" />

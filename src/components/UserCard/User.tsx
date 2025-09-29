@@ -9,17 +9,21 @@ import {
   FollowButton,
 } from "./User.styles";
 
-const User = () => {
+interface ChildProps {
+  userName: string;
+  description: string;
+  userColor?: string;
+}
+
+const User = ({ userName, description, userColor }: ChildProps) => {
   return (
     <UserCardContainer>
       <UserLeft>
-        <UserLeftImage></UserLeftImage>
+        <UserLeftImage userColor={userColor}></UserLeftImage>
       </UserLeft>
       <UserMiddle>
-        <UserName>Dr.Derek Austin</UserName>
-        <UserDescription>
-          AI Content Engineer | teach LLMs to think - Full...
-        </UserDescription>
+        <UserName>{userName}</UserName>
+        <UserDescription>{description}</UserDescription>
       </UserMiddle>
       <UserRight>
         <FollowButton>Follow</FollowButton>

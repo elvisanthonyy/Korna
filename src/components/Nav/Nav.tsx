@@ -3,7 +3,7 @@ import {
   MenuContainer,
   StyledName,
   SearchContainer,
-  SerachIcon,
+  SearchIcon,
   Search,
   LeftNavContainer,
   RightNavContainer,
@@ -26,9 +26,9 @@ export const Nav = () => {
         </MenuContainer>
         <StyledName>Medium</StyledName>
         <SearchContainer>
-          <SerachIcon>
+          <SearchIcon>
             <MdSearch />
-          </SerachIcon>
+          </SearchIcon>
           <Search>Search</Search>
         </SearchContainer>
       </LeftNavContainer>

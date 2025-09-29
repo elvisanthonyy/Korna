@@ -11,4 +11,11 @@ export const TopicStyledButton = styled.button`
   border: none;
   border-radius: 2em;
   font-size: 0.7em;
+  cursor: pointer;
+  color: #202020;
+  font-weight: 500;
+  transition: all 0.3s ease-in;
+  &:hover {
+    opacity: 0.6;
+  }
 `;

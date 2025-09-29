@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { MainBarItemContainer } from "../MainBar/MainBar.styles";
-import { UserDescription } from "../UserCard/User.styles";
 
 export const SideBarContainer = styled.div`
   position: fixed;
@@ -18,7 +17,7 @@ export const SideBarContainer = styled.div`
 `;
 
 export const SideBarItems = styled(MainBarItemContainer)`
-  width: 80%;
+  width: 75%;
   margin-bottom: 40px;
   height: fit-content;
 `;
@@ -38,7 +37,9 @@ export const StaffPickHeading = styled.h3`
   align-items: center;
   width: 100%;
   height: 20px;
-  font-size: 1em;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 1em;
 `;
 
 export const StaffSeeFull = styled.p`
@@ -47,8 +48,9 @@ export const StaffSeeFull = styled.p`
   align-items: center;
   width: 100%;
   height: 30px;
-  font-size: 0.6em;
-  color: gray;
+  font-size: 0.8em;
+  color: #5c5c5c;
+  font-weight: 500;
 `;
 
 export const RecommendedTopicsContainer = styled.div`
@@ -75,7 +77,8 @@ export const TopicsTitle = styled.h2`
   align-items: center;
   width: 100%;
   height: 20px;
-  font-size: 1em;
+  font-size: 1.2em;
+  margin-bottom: 1.7em;
 `;
 
 export const TopicsMoreTopics = styled(StaffSeeFull)`
@@ -87,31 +90,47 @@ export const WhoToFollowContainer = styled(StaffPickConatainer)`
 `;
 
 export const WhoToFollowTitle = styled(StaffPickHeading)`
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 `;
 
 export const WhoToFollowSeeMore = styled(StaffSeeFull)``;
 
 export const ReadingList = styled(StaffPickConatainer)`
-  height: 130px;
+  justify-content: start;
+  height: 150px;
 `;
 
 export const ReadingListTitle = styled(StaffPickHeading)`
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
   margin: 0;
 `;
 
-export const ReadingListText = styled(UserDescription)`
+export const ReadingListTextContainer = styled.div`
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: start;
+  height: 40px;
   font-size: 0.8em;
-  margin-top: 3em;
+  margin-top: 1.6em;
+`;
+export const ReadingListText = styled.p`
+  display: flex;
+  height: 20px;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 1em;
+  margin-top: 1.3em;
+  margin: 0;
 `;
 
 export const ReadingListBookmarkIcon = styled.span`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   height: 30px;
   width: 30px;
+  font-size: 1.7em;
 `;
 
 export const SideBarFooter = styled.span`
@@ -119,7 +138,7 @@ export const SideBarFooter = styled.span`
   flex-wrap: wrap;
   row-gap: 0;
   align-items: center;
-  flex-shrink: 0;
-  height: 80px;
+  height: 60px;
   width: 100%;
+  margin-bottom: 3em;
 `;

@@ -3,10 +3,11 @@ import { IconContainer } from "./IconHolder.styles";
 
 interface ChildProps {
   Icon: IconType;
+  iconColor?: string;
 }
 
-const IconHolder = ({ Icon }: ChildProps) => {
-  return <IconContainer>{<Icon />}</IconContainer>;
+const IconHolder = ({ Icon, iconColor }: ChildProps) => {
+  return <IconContainer variant={iconColor}>{<Icon />}</IconContainer>;
 };
 
 export default IconHolder;

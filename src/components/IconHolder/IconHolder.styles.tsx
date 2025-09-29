@@ -1,16 +1,21 @@
 import styled from "styled-components";
 
-export const IconContainer = styled.div`
+interface Variant {
+  variant?: string;
+}
+
+export const IconContainer = styled.div<Variant>`
   display: flex;
-  justify-content: space-evenly;
+  flex-shrink: 0;
+  justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 30px;
-
-  margin-right: 16px;
-`;
-
-export const IconText = styled.p`
-  font-size: 0.8em;
-  color: gray;
+  height: 25px;
+  width: 25px;
+  color: ${(props) => (props.variant === "yellow" ? "yellow" : "#5e5e5e")};
+  font-size: 1.3em;
+  cursor: pointer;
+  @media (max-width: 820px) {
+    height: 10px;
+    width: 10px;
+  }
 `;

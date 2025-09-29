@@ -5,17 +5,18 @@ import {
   StaffPickCardPosted,
 } from "./StaffPickCard.styles";
 
-const StaffPickCard = () => {
+interface ChildProps {
+  postedBy: string;
+  pickTitle: string;
+  postedAt: string;
+}
+
+const StaffPickCard = ({ postedBy, pickTitle, postedAt }: ChildProps) => {
   return (
     <StaffPickCardContainer>
-      <StaffPickCardAuthor>
-        In The Medium Handbook by Zulie @Medium
-      </StaffPickCardAuthor>
-      <StaffPickCardTitle>
-        How this brand strategist uses Medium to explore ideas, repurpose
-        context, and land clients
-      </StaffPickCardTitle>
-      <StaffPickCardPosted>2d ago</StaffPickCardPosted>
+      <StaffPickCardAuthor>{postedBy}</StaffPickCardAuthor>
+      <StaffPickCardTitle>{pickTitle}</StaffPickCardTitle>
+      <StaffPickCardPosted>{postedAt}</StaffPickCardPosted>
     </StaffPickCardContainer>
   );
 };

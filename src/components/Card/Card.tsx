@@ -1,6 +1,7 @@
 import IconHolder from "../IconHolder/IconHolder";
 import {
   CardContainer,
+  MainCardContainer,
   WriteUpAndIcons,
   ImageContainer,
   AuthorContainer,
@@ -14,6 +15,7 @@ import {
   PostedAt,
   IconContainer,
   IconText,
+  Image,
 } from "./Card.styles";
 
 import { HiEllipsisHorizontal } from "react-icons/hi2";
@@ -24,6 +26,9 @@ interface ChildProps {
   authorDetails: String;
   clapAmount: string;
   commentAmount: string;
+  postedAt: string;
+  imageUrl: string;
+  authColor: string;
 }
 
 import { FaComment } from "react-icons/fa";
@@ -38,38 +43,51 @@ const Card = ({
   authorDetails,
   clapAmount,
   commentAmount,
+  postedAt,
+  imageUrl,
+  authColor,
 }: ChildProps) => {
   return (
     <CardContainer>
-      <WriteUpAndIcons>
-        <AuthorContainer>
-          <AuthorLogo></AuthorLogo>
-          <Authordetails>{authorDetails}</Authordetails>
-        </AuthorContainer>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-        <CardIcons>
-          <LeftIcons>
-            <IconHolder Icon={RiSparklingFill} />
+      <AuthorContainer>
+        <AuthorLogo authColor={authColor}></AuthorLogo>
+        <Authordetails>{authorDetails}</Authordetails>
+      </AuthorContainer>
+      <MainCardContainer>
+        <WriteUpAndIcons>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
+          <CardIcons>
+            <LeftIcons>
+              <IconHolder iconColor="yellow" Icon={RiSparklingFill} />
 
-            <PostedAt>5d ago</PostedAt>
-            <IconContainer>
-              <IconHolder Icon={FaHandsClapping} />
-              <IconText>{clapAmount}</IconText>
-            </IconContainer>
-            <IconContainer>
-              <IconHolder Icon={FaComment} />
-              <IconText>{commentAmount}</IconText>
-            </IconContainer>
-          </LeftIcons>
-          <RightIcons>
-            <IconHolder Icon={IoRemoveCircleOutline} />
-            <IconHolder Icon={MdOutlineBookmarkAdd} />
-            <IconHolder Icon={HiEllipsisHorizontal} />
-          </RightIcons>
-        </CardIcons>
-      </WriteUpAndIcons>
-      <ImageContainer></ImageContainer>
+              <PostedAt>{postedAt}</PostedAt>
+              <IconContainer>
+                <IconHolder Icon={FaHandsClapping} />
+                <IconText>{clapAmount}</IconText>
+              </IconContainer>
+              <IconContainer>
+                <IconHolder Icon={FaComment} />
+                <IconText>{commentAmount}</IconText>
+              </IconContainer>
+            </LeftIcons>
+            <RightIcons>
+              <IconContainer type="navigation">
+                <IconHolder Icon={IoRemoveCircleOutline} />
+              </IconContainer>
+              <IconContainer type="navigation" name="bookMark">
+                <IconHolder Icon={MdOutlineBookmarkAdd} />
+              </IconContainer>
+              <IconContainer type="navigation">
+                <IconHolder Icon={HiEllipsisHorizontal} />
+              </IconContainer>
+            </RightIcons>
+          </CardIcons>
+        </WriteUpAndIcons>
+        <ImageContainer>
+          <Image src={imageUrl} />
+        </ImageContainer>
+      </MainCardContainer>
     </CardContainer>
   );
 };

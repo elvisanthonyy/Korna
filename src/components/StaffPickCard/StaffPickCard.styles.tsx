@@ -6,18 +6,20 @@ export const StaffPickCardContainer = styled.div`
   padding: 10px 0;
   flex-direction: column;
   width: 100%;
-  height: 130px;
+  min-height: 130px;
   margin-bottom: 0;
 `;
 
 export const StaffPickCardAuthor = styled.h3`
   display: flex;
   align-items: center;
-  font-size: 0.8em;
+  font-size: 0.7em;
+  margin-bottom: 16px;
   margin: 0;
   width: 100%;
   height: 30px;
-  color: #363636;
+  color: #2e2e2e;
+  font-weight: 600;
 `;
 
 export const StaffPickCardTitle = styled.h2`
@@ -27,7 +29,10 @@ export const StaffPickCardTitle = styled.h2`
   align-items: center;
   margin: 0;
   height: 70px;
-  font-size: 1em;
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  color: #3f3f3f;
+  font-weight: 900;
 `;
 
 export const StaffPickCardPosted = styled.p`
@@ -37,6 +42,7 @@ export const StaffPickCardPosted = styled.p`
   align-items: center;
   margin: 0;
   height: 30px;
-  font-size: 0.6em;
-  color: gray;
+  font-size: 0.8em;
+  color: #5c5c5c;
+  font-weight: 500;
 `;
