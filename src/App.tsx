@@ -1,6 +1,5 @@
 import "./index.css";
 import Nav from "./components/Nav/Nav";
-import Main from "./components/Main/Main";
 import MainBar from "./components/MainBar/MainBar";
 import SideBar from "./components/SideBar/SideBar";
 import { createGlobalStyle } from "styled-components";
